@@ -335,37 +335,5 @@ public class CalculadoraDark extends JFrame implements ActionListener {
 		return jButton;
 	}
 
-	private void alternarCorBotao(JButton btn) {
-		btn.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				btn.setBackground(corFundo);
-			}
 
-			@Override
-			public void mouseExited(MouseEvent e) {
-				btn.setBackground(corBotao);
-			}
-		});
-	}
-		private void movimentarTela() {
-		contentPane.addMouseMotionListener(new MouseMotionAdapter() {
-			@Override
-			public void mouseDragged(MouseEvent e) {
-				setLocation(e.getXOnScreen() - x, e.getYOnScreen() - y);
-			}
-		});
-		contentPane.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mousePressed(MouseEvent e) {
-				x = e.getX();
-				y = e.getY();
-			}
-
-			@Override
-			public void mouseReleased(MouseEvent e) {
-			}
-		});
-	}
-}
 
